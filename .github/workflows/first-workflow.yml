@@ -11,4 +11,14 @@ jobs:
         run: |
           echo "Command 1"
           echo "Command 2"
+          
+  clone:
+    runs-on: windows-latest
+    steps:
+      - name: Klone das Repo
+        uses: actions/checkout@v3
+      - name: Zeige den Inhalt an
+        run: ls
+        
 
+  
