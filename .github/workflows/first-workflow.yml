@@ -7,4 +7,8 @@ jobs:
     steps:
       - name: Print Hello World
         run: echo "Hello World!"
+      - name: Multiple Commands
+        run: |
+          echo "Command 1"
+          echo "Command 2"
 
