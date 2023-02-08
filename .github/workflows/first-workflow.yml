@@ -13,6 +13,7 @@ jobs:
           echo "Command 2"
           
   clone:
+    needs: [first-job]
     runs-on: windows-latest
     steps:
       - name: Klone das Repo
