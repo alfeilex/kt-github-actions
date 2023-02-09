@@ -5,11 +5,5 @@ jobs:
   ersterJob:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-  zweiterjob:
-    needs: ersterJob
-    runs-on: windows-latest
-    steps:
-      - name: Context Object
-        run: echo ${{ toJSON(github) }}
+      - name: Context Objecto
+        run: echo "${{ toJSON(github) }}"
