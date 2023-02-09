@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Skript starten
-        run: echo ${{ github }}
+        run: echo ${{ toJSON(github) }}
