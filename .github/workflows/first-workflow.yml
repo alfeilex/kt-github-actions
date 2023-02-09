@@ -1,8 +1,8 @@
-name: Erster Workflow
+name: Workflow mit Action
 on: workflow_dispatch
 jobs:
-  ErsterJob:
+  Klonen:
     runs-on: ubuntu-latest
     steps:
-      - name: Erster Schritt
-        run: echo "Hello World"
+      - name: Checkout Repo
+        uses: actions/checkout@v3
