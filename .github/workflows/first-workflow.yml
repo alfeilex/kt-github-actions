@@ -1,9 +1,11 @@
 name: Erster Workflow
-on: workflow_dispatch
+on: push
 
 jobs:
   ersterJob:
     runs-on: ubuntu-latest
     steps:
-      - name: erster Schritt
-        run: echo "Hello World"
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Inhalt
+        run: ls
