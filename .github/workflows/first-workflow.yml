@@ -12,4 +12,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Context Object
-        run: echo "${{ toJSON(github) }}
+        run: echo ${{ toJSON(github) }}
