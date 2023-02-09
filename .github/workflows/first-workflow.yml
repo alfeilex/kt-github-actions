@@ -1,25 +1,8 @@
-name: First Workflow
+name: Erster Workflow
 on: workflow_dispatch
-
 jobs:
-  first-job:
+  ErsterJob:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Hello World
-        run: echo "Hello World!"
-      - name: Multiple Commands
-        run: |
-          echo "Command 1"
-          echo "Command 2"
-          
-  clone:
-    needs: [first-job]
-    runs-on: windows-latest
-    steps:
-      - name: Klone das Repo
-        uses: actions/checkout@v3
-      - name: Zeige den Inhalt an
-        run: ls
-        
-
-  
+      - name: Erster Schritt
+        run: echo "Hello World"
