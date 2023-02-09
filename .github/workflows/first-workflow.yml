@@ -11,5 +11,5 @@ jobs:
     needs: ersterJob
     runs-on: windows-latest
     steps:
-      - name: ersterschritt
-        run: echo "hello"
+      - name: Context Object
+        run: echo "${{ toJSON(github) }}
