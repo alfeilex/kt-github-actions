@@ -1,8 +1,13 @@
-name: Workflow mit Action
+name: Sequentielle Jobs
 on: workflow_dispatch
 jobs:
-  Klonen:
+  ersterJob:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+  zweiterJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Skript starten
+        run: ./test
