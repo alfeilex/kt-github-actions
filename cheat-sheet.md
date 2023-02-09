@@ -89,7 +89,8 @@ Expressions sind ein wichtiger Teil des GitHub Actions-Systems. Es ermöglicht D
 ```yml
 run: echo ${{ github }}
 ```
-
-Hier gibt es Weiteres zum nachlesen:
+Hier gibt es Weiteres zum nachlesen über die Expressions Funktion:
+https://docs.github.com/en/actions/learn-github-actions/expressions
+Hier gibt es Weiteres zum nachlesen über GitHub Kontext:
 https://docs.github.com/en/actions/learn-github-actions/contexts#github-context
 
