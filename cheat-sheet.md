@@ -59,3 +59,37 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v3
 ```
+
+### Sequentielle Jobs
+Grundsätzlich laufen Jobs im selben Workflow parallel. Allerdings gibt es Fälle, wo dieses Verhalten nicht erwünscht ist. Dafür kann man Abhängigkeiten
+über das Schlagwort `needs` definieren.
+
+```yml
+name: Sequentielle Jobs
+on: workflow_dispatch
+jobs:
+  ersterJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+      - name: Skript starten
+        run: ./test
+  zweiterJob:
+    needs: ersterJob
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Deploy"
+```
+
+### Expressions und Metadaten
+Expressions sind ein wichtiger Teil des GitHub Actions-Systems. Es ermöglicht Daten und Konfiguration in einem Workflow zu spezifizieren. Sie können aus vordefinierten Variablen oder Funktionen bestehen. Zusammen mit dem Kontext-Objekt von Github Actions können somit diverse Informationen zur Workflowumgebung genutzt werden. Darunter welches Event den Workflow gestartet hat und vieles mehr. 
+
+```yml
+run: echo ${{ github }}
+```
+
+Hier gibt es Weiteres zum nachlesen:
+https://docs.github.com/en/actions/learn-github-actions/contexts#github-context
+
