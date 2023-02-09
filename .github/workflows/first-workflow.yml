@@ -1,16 +1,9 @@
-name: Sequentielle Jobs
+name: Erster Workflow
 on: workflow_dispatch
+
 jobs:
   ersterJob:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
-      - name: Skript starten
-        run: bash test
-  zweiterJob:
-    needs: ersterJob
-    runs-on: ubuntu-latest
-    steps:
-      - name: Skript starten
-        run: echo "${{ toJSON(github) }}"
+      - name: erster Schritt
+        run: echo "Hello World"
