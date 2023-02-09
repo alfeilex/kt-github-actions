@@ -6,9 +6,11 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
+      - name: Skript starten
+        run: ./test
   zweiterJob:
     needs: ersterJob
     runs-on: ubuntu-latest
     steps:
       - name: Skript starten
-        run: ./test
+        run: "ss"
