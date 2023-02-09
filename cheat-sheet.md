@@ -87,7 +87,7 @@ jobs:
 Expressions sind ein wichtiger Teil des GitHub Actions-Systems. Es ermöglicht Daten und Konfiguration in einem Workflow zu spezifizieren. Sie können aus vordefinierten Variablen oder Funktionen bestehen. Zusammen mit dem Kontext-Objekt von Github Actions können somit diverse Informationen zur Workflowumgebung genutzt werden. Darunter welches Event den Workflow gestartet hat und vieles mehr. 
 
 ```yml
-run: echo ${{ github }}
+run: echo ${{ toJSON(github) }}
 ```
 Hier gibt es Weiteres zum nachlesen über die Expressions Funktion:
 https://docs.github.com/en/actions/learn-github-actions/expressions
