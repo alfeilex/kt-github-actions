@@ -13,7 +13,7 @@ jobs:
         with:
           repository: alfeilex/git-action-sandbox
           path: sandbox
-          token: ${{ github.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: add txt file
         run: |
           cd sandbox
@@ -22,6 +22,7 @@ jobs:
       - name: Commit and push to sandbox
         run: |
           cd sandbox
+          ls
           git add .
           git config --global user.name ${{ secrets.BUILD_USER }}
           git config --global user.email ${{ secrets.BUILD_USER_EMAIL }}
