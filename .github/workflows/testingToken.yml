@@ -5,7 +5,7 @@ on:
     - cron: '* * * 6 *'
     
 jobs:
-  clone repo:
+  clone-repo:
     runs-on: ubuntu-latest
     steps:
       - name: clone repo
