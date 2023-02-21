@@ -18,6 +18,7 @@ jobs:
         run: |
           cd sandbox
           touch text.txt
+          ls
       - name: Commit and push to sandbox
         run: |
           cd sandbox
