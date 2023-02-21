@@ -13,7 +13,7 @@ jobs:
         with:
           repository: alfeilex/git-action-sandbox
           path: sandbox
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ github.token }}
       - name: add txt file
         run: |
           cd sandbox
