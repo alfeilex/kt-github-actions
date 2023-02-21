@@ -17,7 +17,7 @@ jobs:
       - name: add txt file
         run: |
           cd sandbox
-          touch text.txt
+          touch tsext.txt
           ls
       - name: Commit and push to sandbox
         run: |
