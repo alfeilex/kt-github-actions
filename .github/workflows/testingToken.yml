@@ -1,6 +1,6 @@
 name: Testing Token
 on:
-  workflow-dispatch:
+  workflow_dispatch:
   schedule:
     - cron: '* * * 6 *'
     
